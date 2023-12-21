@@ -1,1 +1,3 @@
 Wir haben uns dafür entschieden mit einem sehr einfachen Branching-Modell zu arbeiten. Da wir noch nicht all zu sicher mit Git sind, sollte dies die arbeit erleichtern. 
+
+Zudem wollten wir, dass jeder kleinere Regeln in der Gruppe befolgt. So soll z.B. auf sinnige Commit-Nachrichten geachtet werden und darauf, dass auch auf den richtigen Branch gepushed wird. 
