@@ -1,0 +1,1 @@
+Wir haben uns dafür entschieden mit einem sehr einfachen Branching-Modell zu arbeiten. Da wir noch nicht all zu sicher mit Git sind, sollte dies die arbeit erleichtern. 
