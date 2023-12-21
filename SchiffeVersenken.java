@@ -144,15 +144,18 @@ public class SchiffeVersenken {
 		} while (spielerFeld[x][y] == TREFFER || spielerFeld[x][y] == VERFEHLT);
 
 		if (spielerFeld[x][y] == SCHIFF) {
-			System.out.println("Der Gegner hat" + ANSI_RED + " getroffen" + ANSI_RESET + "!");
-			System.out.println(ANSI_CYAN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + ANSI_RESET);
-			spielerFeld[x][y] = TREFFER;
-			verbleibendeSpielerSchiffe--;
-		} else {
-			System.out.println("Der Gegner hat" + ANSI_GREEN + " verfehlt" + ANSI_RESET + "!");
-			System.out.println(ANSI_CYAN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + ANSI_RESET);
-			spielerFeld[x][y] = VERFEHLT;
-		}
+	        System.out.println("Der Gegner hat" + ANSI_RED + " getroffen" + ANSI_RESET + "!");
+	        System.out.println(ANSI_CYAN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + ANSI_RESET);
+	        spielerFeld[x][y] = TREFFER;
+	        verbleibendeSpielerSchiffe--;
+
+	        // Der Gegner darf erneut schießen
+	        gegnerSchuss();
+	    } else {
+	        System.out.println("Der Gegner hat" + ANSI_GREEN + " verfehlt" + ANSI_RESET + "!");
+	        System.out.println(ANSI_CYAN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + ANSI_RESET);
+	        spielerFeld[x][y] = VERFEHLT;
+	    }
 	}
 
 	public boolean istSpielerSpielvorbei() {
