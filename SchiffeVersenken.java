@@ -24,17 +24,17 @@ public class SchiffeVersenken {
 
 	private static void zeigeStartbildschirm() {
 
-	System.out.println(ANSI_CYAN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + ANSI_RESET);
-    System.out.println(ANSI_CYAN + "~~~~~~~~~~~~~~~~" + ANSI_RESET + " Ahoi Seemann! " + ANSI_CYAN + "~~~~~~~~~~~~~~~~~" + ANSI_RESET);
-    System.out.println(ANSI_CYAN + "~~~~~~" + ANSI_RESET + " Willkommen bei Schiffe Versenken! " + ANSI_CYAN + "~~~~~~~" + ANSI_RESET);
-    System.out.println(ANSI_CYAN + "~~~~~~~~~~~~~~~~~~~~~~" + ANSI_RESET + ANSI_YELLOW + "⚓︎" + ANSI_RESET + ANSI_CYAN + "~~~~~~~~~~~~~~~~~~~~~~~~" + ANSI_RESET);
-    System.out.println(ANSI_CYAN + "~~~~~~~" + ANSI_RESET + "Versuche alle Schiffe zu treffen." + ANSI_CYAN + "~~~~~~~~" + ANSI_RESET);
-    System.out.println(ANSI_CYAN + "~~~~~" + ANSI_RESET + "Drücke Enter, um das Spiel zu starten." + ANSI_CYAN + "~~~~~" + ANSI_RESET);
-    System.out.println(ANSI_CYAN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + ANSI_RESET);
-    new Scanner(System.in).nextLine(); // Warte auf Eingabe
-}
+		System.out.println(ANSI_CYAN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + ANSI_RESET);
+		System.out.println(ANSI_CYAN + "~~~~~~~~~~~~~~~~" + ANSI_RESET + " Ahoi Seemann! " + ANSI_CYAN + "~~~~~~~~~~~~~~~~~" + ANSI_RESET);
+		System.out.println(ANSI_CYAN + "~~~~~~" + ANSI_RESET + " Willkommen bei Schiffe Versenken! " + ANSI_CYAN + "~~~~~~~" + ANSI_RESET);
+		System.out.println(ANSI_CYAN + "~~~~~~~~~~~~~~~~~~~~~~" + ANSI_RESET + ANSI_YELLOW + "⚓︎" + ANSI_RESET + ANSI_CYAN + "~~~~~~~~~~~~~~~~~~~~~~~~" + ANSI_RESET);
+		System.out.println(ANSI_CYAN + "~~~~~~~" + ANSI_RESET + "Versuche alle Schiffe zu treffen." + ANSI_CYAN + "~~~~~~~~" + ANSI_RESET);
+		System.out.println(ANSI_CYAN + "~~~~~" + ANSI_RESET + "Drücke Enter, um das Spiel zu starten." + ANSI_CYAN + "~~~~~" + ANSI_RESET);
+		System.out.println(ANSI_CYAN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + ANSI_RESET);
+		new Scanner(System.in).nextLine(); 
+		// Warte auf Eingabe
+	}
 
-	
 	public SchiffeVersenken() {
 		spielerFeld = new char[GROESSE][GROESSE];
 		gegnerFeld = new char[GROESSE][GROESSE];
@@ -122,13 +122,13 @@ public class SchiffeVersenken {
 
 	public boolean spielerSchuss(int x, int y) {
 		if (gegnerFeld[x][y] == SCHIFF) {
-			System.out.println(ANSI_CYAN + "                                       " + ANSI_RESET);
+			System.out.println(ANSI_CYAN + " " + ANSI_RESET);
 			System.out.println("Du hast " + ANSI_GREEN + "getroffen!" + ANSI_RESET);
 			gegnerFeld[x][y] = TREFFER;
 			verbleibendeGegnerSchiffe--;
 			return true;
 		} else {
-			System.out.println(ANSI_CYAN + "                                       " + ANSI_RESET);
+			System.out.println(ANSI_CYAN + " " + ANSI_RESET);
 			System.out.println("Du hast " + ANSI_RED + "verfehlt!" + ANSI_RESET);
 			gegnerFeld[x][y] = VERFEHLT;
 			return false;

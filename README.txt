@@ -1,5 +1,5 @@
 Benutzernamen der Gruppenmitglieder auf Git:
 Denise Barg - on23db 
-Paula Neumann - 
-Marie Arnold - 
-Zoe Neuberger -
+Paula Neumann - ON23PN
+Marie Arnold - WON23Marie
+Zoe Neuberger - On23ZN
